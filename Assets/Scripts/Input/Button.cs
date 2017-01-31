@@ -53,7 +53,7 @@ public class Button : GazeSelectionTarget, IFadeTarget
         }
     }
 
-    private static bool hasGaze = false;
+    public static bool hasGaze = false;
 
     private MeshRenderer meshRenderer;
     private PlacementControl cubeToMove;
@@ -127,6 +127,7 @@ public class Button : GazeSelectionTarget, IFadeTarget
 
     public void Highlight()
     {
+        Debug.Log("HAZE");
         if (!ToolManager.Instance.IsLocked)
         {
             ToolSounds.Instance.PlayHighlightSound();

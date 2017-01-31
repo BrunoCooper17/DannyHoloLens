@@ -13,7 +13,7 @@ public class GazeSelectionManager : Singleton<GazeSelectionManager>
 
     public float timeUnselected = 0.0f;
 
-    private GazeSelectionTarget selectedTarget;
+    public GazeSelectionTarget selectedTarget;
 
     public GazeSelectionTarget SelectedTarget
     {

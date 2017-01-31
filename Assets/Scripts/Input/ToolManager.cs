@@ -13,9 +13,9 @@ public class ToolManager : Singleton<ToolManager>
     public float TargetMinZoomSize = 0.15f;
     public float LargestZoom = 3.0f;
 
-    private bool locked = false;
-    private ToolPanel panel;
-    private ToolSounds toolSounds;
+    public bool locked = false;
+    public ToolPanel panel;
+    public ToolSounds toolSounds;
     
     public bool IsLocked
     {

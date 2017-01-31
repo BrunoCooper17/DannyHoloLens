@@ -15,29 +15,29 @@ EditorBuildSettings:
     path: Assets/Scenes/CoreSystems.unity
   - enabled: 1
     path: Assets/Scenes/Views/EarthView.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Views/SunView.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Views/JupiterView.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Views/MarsView.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Views/MercuryView.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Views/NeptuneView.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Views/PlutoView.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Views/SaturnView.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Views/UranusView.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Views/VenusView.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Views/GalacticCenter.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Views/S2View.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Views/S102View.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Views/SagAStarView.unity

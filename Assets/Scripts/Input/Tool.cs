@@ -15,7 +15,7 @@ public enum ToolType
 
 public class Tool : GazeSelectionTarget, IFadeTarget
 {
-    private static bool hasGaze = false;
+    public static bool hasGaze = false;
 
     public GameObject TooltipObject;
     public Material DefaultMaterial;
@@ -36,7 +36,7 @@ public class Tool : GazeSelectionTarget, IFadeTarget
 
     private float scalePercentValue = 0.6f;
     private GameObject contentToManipulate;
-    private bool selected = false;
+    public bool selected = false;
     private MeshRenderer meshRenderer;
 
     private float currentOpacity = 1;
@@ -135,6 +135,8 @@ public class Tool : GazeSelectionTarget, IFadeTarget
         {
             PlayerInputManager.Instance.TapPressAction += PlayEngagedSound;
             PlayerInputManager.Instance.TapReleaseAction += PlayDisengagedSound;
+
+            Debug.Log("PLAYER INPUT MANAGER");
         }
     }
 
@@ -153,6 +155,7 @@ public class Tool : GazeSelectionTarget, IFadeTarget
 
     public void Highlight()
     {
+        Debug.Log("HAZE");
         if (!ToolManager.Instance.IsLocked)
         {
             if (!selected)

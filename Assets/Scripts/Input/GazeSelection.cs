@@ -14,15 +14,15 @@ public class GazeSelection : MonoBehaviour
     public float GazeSpreadDegrees = 30.0f;
 
     // ordered from closest to gaze to farthest
-    private SortedList<float, RaycastHit> selectedTargets;
+    public SortedList<float, RaycastHit> selectedTargets;
 
     public IList<RaycastHit> SelectedTargets
     {
         get { return selectedTargets != null ? selectedTargets.Values : null; }
     }
 
-    private float targetSpreadMinValue;
-    private PlacementControl placementControl;
+    public float targetSpreadMinValue;
+    public PlacementControl placementControl;
     
     private void Start()
     {

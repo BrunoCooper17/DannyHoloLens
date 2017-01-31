@@ -35,7 +35,7 @@ public class TransitionManager : Singleton<TransitionManager>
         }
     }
 
-    private bool isIntro = true;
+    public bool isIntro = true;
 
     public bool IsIntro
     {

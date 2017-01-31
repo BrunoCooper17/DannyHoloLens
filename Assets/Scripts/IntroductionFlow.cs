@@ -37,7 +37,7 @@ public class IntroductionFlow : Singleton<IntroductionFlow>
     private PlacementControl placementControl;
     private IntroEarth introEarth;
     private Animator logoAnimator;
-    private AudioSource audioSource;
+    public AudioSource audioSource;
 
     public enum IntroductionState
     {
@@ -173,6 +173,7 @@ public class IntroductionFlow : Singleton<IntroductionFlow>
                         {
                             introEarth.SetIntroMode(true);
                             PlayOneShot(EarthPlacement);
+                            //GameObject.Find("ToolsController").transform.GetChild(0).gameObject.SetActive(true);
                         }
                     }
                 }
@@ -185,27 +186,30 @@ public class IntroductionFlow : Singleton<IntroductionFlow>
                 }
 
                 break;
-
+                
             case IntroductionState.IntroductionStateEarthFadeout:
-                if (timeInState > SecondsToFadeOutEarth)
+                currentState = IntroductionState.IntroductionStateComplete - 1;
+                TransitionManager.Instance.IsIntro = false;
+                AdvanceIntroduction();
+                /*if (timeInState > SecondsToFadeOutEarth)
                 {
                     if (!SkipPlaceEarth)
                     {
                         // If we placed the Earth, play the VO "Great!" to
                         // give feedback to the user that they did something
                         // important.
-                        VOManager.Instance.PlayClip(EarthCentered);
+                        //VOManager.Instance.PlayClip(EarthCentered);
                     }
-                    VOManager.Instance.PlayClip(Earth);
+                    //VOManager.Instance.PlayClip(Earth);
                     AdvanceIntroduction();
-                }
+                }*/
 
                 break;
-
+                /*
             case IntroductionState.IntroductionEarth:
                 if (timeInState > SecondsOnEarth)
                 {
-                    VOManager.Instance.PlayClip(SolarSystem);
+                    //VOManager.Instance.PlayClip(SolarSystem);
                     TransitionManager.Instance.LoadPrevScene("SolarSystemView");
                     AdvanceIntroduction();
                 }
@@ -229,8 +233,8 @@ public class IntroductionFlow : Singleton<IntroductionFlow>
                 }
 
                 break;
+                */
         }
-
         timeInState += Time.deltaTime;
     }
 
@@ -244,10 +248,10 @@ public class IntroductionFlow : Singleton<IntroductionFlow>
 
         MusicManager.Instance.FindSnapshotAndTransition(MusicManager.Instance.Welcome);
         VOManager.Instance.Stop(clearQueue: true);
-        VOManager.Instance.PlayClip(Title);
-        VOManager.Instance.PlayClip(Description);
-        VOManager.Instance.PlayClip(Goal);
-        VOManager.Instance.PlayClip(Invitation);
+        //VOManager.Instance.PlayClip(Title);
+        //VOManager.Instance.PlayClip(Description);
+        //VOManager.Instance.PlayClip(Goal);
+        //VOManager.Instance.PlayClip(Invitation);
 
         UpdateInstructions();
     }
@@ -323,7 +327,7 @@ public class IntroductionFlow : Singleton<IntroductionFlow>
                 case IntroductionState.IntroductionStatePreloadSolarSystem:
                     if (!SkipPlaceEarth)
                     {
-                        VOManager.Instance.PlayClip(CenterEarth);
+                        //VOManager.Instance.PlayClip(CenterEarth);
                     }
                     break;
             }
