@@ -13,8 +13,10 @@ ModelImporter:
     400004: EarthGlow
     2300000: EARTH
     2300002: EarthGlow
+    2300004: //RootNode
     3300000: EARTH
     3300002: EarthGlow
+    3300004: //RootNode
     4300000: EarthGlow
     4300002: EARTH
     9500000: //RootNode
