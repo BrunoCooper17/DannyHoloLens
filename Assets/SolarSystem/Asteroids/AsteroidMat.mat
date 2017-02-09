@@ -108,7 +108,7 @@ Material:
       second: 1
     - first:
         name: _TransitionAlpha
-      second: 1
+      second: 0
     - first:
         name: _UVSec
       second: 0
@@ -130,4 +130,4 @@ Material:
       second: {r: 0.43, g: 0.43, b: 0.43, a: 1}
     - first:
         name: _LightPosition
-      second: {r: -0.0181863, g: 0.25424072, b: 2.2887166, a: 0}
+      second: {r: 0, g: 0, b: 0, a: 0}
