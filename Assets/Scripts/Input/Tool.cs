@@ -135,8 +135,6 @@ public class Tool : GazeSelectionTarget, IFadeTarget
         {
             PlayerInputManager.Instance.TapPressAction += PlayEngagedSound;
             PlayerInputManager.Instance.TapReleaseAction += PlayDisengagedSound;
-
-            Debug.Log("PLAYER INPUT MANAGER");
         }
     }
 

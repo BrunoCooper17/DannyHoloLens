@@ -482,6 +482,9 @@ MonoBehaviour:
   HideButton: {fileID: 487631414}
   TargetMinZoomSize: 0.15
   LargestZoom: 3
+  locked: 0
+  panel: {fileID: 0}
+  toolSounds: {fileID: 0}
 --- !u!4 &269694817
 Transform:
   m_ObjectHideFlags: 0
@@ -1295,6 +1298,7 @@ MonoBehaviour:
   PanHandSpeed: 2
   MaxRotationAngle: 40
   ClickerRotationSpeed: 0.1
+  selected: 0
 --- !u!65 &792860936
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1461,9 +1465,29 @@ Prefab:
       propertyPath: BackButton
       value: 
       objectReference: {fileID: 1684859070}
+    - target: {fileID: 11413338, guid: cdd71e0dfed91bb469be85b8bbbc932d, type: 2}
+      propertyPath: GazeDistance
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdd71e0dfed91bb469be85b8bbbc932d, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &916455194 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 193434, guid: cdd71e0dfed91bb469be85b8bbbc932d, type: 2}
+  m_PrefabInternal: {fileID: 916455193}
+--- !u!114 &916455195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 916455194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78eca055a2e1d374b9e9434873e82820, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GazeDistance: 100
 --- !u!1 &936425216
 GameObject:
   m_ObjectHideFlags: 0
@@ -1656,6 +1680,7 @@ MonoBehaviour:
   PanHandSpeed: 2
   MaxRotationAngle: 40
   ClickerRotationSpeed: 0.1
+  selected: 0
 --- !u!114 &1017416628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2226,6 +2251,7 @@ MonoBehaviour:
   PanHandSpeed: 2
   MaxRotationAngle: 40
   ClickerRotationSpeed: 1
+  selected: 0
 --- !u!65 &1483408250
 BoxCollider:
   m_ObjectHideFlags: 0

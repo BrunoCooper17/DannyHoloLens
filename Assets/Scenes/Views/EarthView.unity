@@ -100,7 +100,8 @@ GameObject:
   m_Component:
   - component: {fileID: 37292396}
   - component: {fileID: 37292397}
-  m_Layer: 14
+  - component: {fileID: 37292398}
+  m_Layer: 0
   m_Name: MEXICO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,12 +130,27 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 37292395}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 1.5
   m_Height: 9
   m_Direction: 2
   m_Center: {x: 0.0000014305115, y: 0, z: -0.0000076293945}
+--- !u!114 &37292398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 37292395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d59b573cb45da3439a5f1bdb2597a53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VoiceCommands: []
+  bIsSelected: 0
+  materialBarra: {fileID: 1866012349}
+  materialPunta: {fileID: 1614799817}
 --- !u!1 &150121285
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,7 +333,8 @@ GameObject:
   m_Component:
   - component: {fileID: 243312032}
   - component: {fileID: 243312034}
-  m_Layer: 14
+  - component: {fileID: 243312033}
+  m_Layer: 0
   m_Name: SINGAPORE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -338,6 +355,21 @@ Transform:
   m_Father: {fileID: 1245555651}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 180.747, y: -105.931, z: -86.803986}
+--- !u!114 &243312033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 243312031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d59b573cb45da3439a5f1bdb2597a53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VoiceCommands: []
+  bIsSelected: 0
+  materialBarra: {fileID: 1022031976}
+  materialPunta: {fileID: 506924361}
 --- !u!136 &243312034
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -345,7 +377,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 243312031}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 1.5
   m_Height: 9
@@ -360,7 +392,8 @@ GameObject:
   m_Component:
   - component: {fileID: 274819314}
   - component: {fileID: 274819316}
-  m_Layer: 14
+  - component: {fileID: 274819315}
+  m_Layer: 0
   m_Name: NEW_YORK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,6 +414,21 @@ Transform:
   m_Father: {fileID: 1245555651}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 150.08, y: 72.56899, z: 80.948}
+--- !u!114 &274819315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 274819313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d59b573cb45da3439a5f1bdb2597a53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VoiceCommands: []
+  bIsSelected: 0
+  materialBarra: {fileID: 619008629}
+  materialPunta: {fileID: 1771126668}
 --- !u!136 &274819316
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -388,7 +436,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 274819313}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 1.5
   m_Height: 9
@@ -761,7 +809,8 @@ GameObject:
   m_Component:
   - component: {fileID: 471574301}
   - component: {fileID: 471574303}
-  m_Layer: 14
+  - component: {fileID: 471574302}
+  m_Layer: 0
   m_Name: DUBAI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -782,6 +831,21 @@ Transform:
   m_Father: {fileID: 1245555651}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 154.233, y: -49.763977, z: 18.571}
+--- !u!114 &471574302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 471574300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d59b573cb45da3439a5f1bdb2597a53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VoiceCommands: []
+  bIsSelected: 0
+  materialBarra: {fileID: 711077034}
+  materialPunta: {fileID: 903659537}
 --- !u!136 &471574303
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -789,7 +853,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 471574300}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 1.5
   m_Height: 9
@@ -1763,7 +1827,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 7b08c99278047264b980ecde0fbfb7c8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b08c99278047264b980ecde0fbfb7c8, type: 3}
@@ -1785,7 +1849,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1367545499}
   - component: {fileID: 1367545501}
-  m_Layer: 14
+  - component: {fileID: 1367545500}
+  m_Layer: 0
   m_Name: KENTUCKY
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1806,6 +1871,21 @@ Transform:
   m_Father: {fileID: 1245555651}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 149.26599, y: 80.062, z: 84.73599}
+--- !u!114 &1367545500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1367545498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d59b573cb45da3439a5f1bdb2597a53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VoiceCommands: []
+  bIsSelected: 0
+  materialBarra: {fileID: 792874002}
+  materialPunta: {fileID: 343811421}
 --- !u!136 &1367545501
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1813,7 +1893,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1367545498}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 1.5
   m_Height: 9
@@ -2122,7 +2202,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1547930606}
   - component: {fileID: 1547930608}
-  m_Layer: 14
+  - component: {fileID: 1547930607}
+  m_Layer: 0
   m_Name: DUBLIN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2143,6 +2224,21 @@ Transform:
   m_Father: {fileID: 1245555651}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 132.045, y: -24.953003, z: 35.900986}
+--- !u!114 &1547930607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1547930605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d59b573cb45da3439a5f1bdb2597a53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VoiceCommands: []
+  bIsSelected: 0
+  materialBarra: {fileID: 1627630973}
+  materialPunta: {fileID: 947963365}
 --- !u!136 &1547930608
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2150,7 +2246,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1547930605}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 1.5
   m_Height: 9
@@ -2452,7 +2548,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1722457163}
   - component: {fileID: 1722457165}
-  m_Layer: 14
+  - component: {fileID: 1722457164}
+  m_Layer: 0
   m_Name: SAN_FRANCISCO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2473,6 +2570,21 @@ Transform:
   m_Father: {fileID: 1245555651}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 149.79599, y: 105.80499, z: 97.954994}
+--- !u!114 &1722457164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1722457162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d59b573cb45da3439a5f1bdb2597a53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VoiceCommands: []
+  bIsSelected: 0
+  materialBarra: {fileID: 1206995220}
+  materialPunta: {fileID: 231304083}
 --- !u!136 &1722457165
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2480,7 +2592,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1722457162}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 1.5
   m_Height: 9
@@ -2725,7 +2837,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1837845288}
-  m_LocalRotation: {x: -0.018505521, y: -0.014419479, z: 0.69374675, w: -0.71983695}
+  m_LocalRotation: {x: -0.01850552, y: -0.014419477, z: 0.6937467, w: -0.7198369}
   m_LocalPosition: {x: -0.30695394, y: 3.4381967, z: -3.2511084}
   m_LocalScale: {x: 0.61148345, y: 0.6114844, z: 0.19234474}
   m_Children: []
@@ -3050,7 +3162,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1933999154
 Transform:
   m_ObjectHideFlags: 0
