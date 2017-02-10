@@ -153,7 +153,6 @@ public class Tool : GazeSelectionTarget, IFadeTarget
 
     public void Highlight()
     {
-        Debug.Log("HAZE");
         if (!ToolManager.Instance.IsLocked)
         {
             if (!selected)
