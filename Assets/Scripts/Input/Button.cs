@@ -127,7 +127,6 @@ public class Button : GazeSelectionTarget, IFadeTarget
 
     public void Highlight()
     {
-        Debug.Log("HAZE");
         if (!ToolManager.Instance.IsLocked)
         {
             ToolSounds.Instance.PlayHighlightSound();
@@ -215,7 +214,7 @@ public class Button : GazeSelectionTarget, IFadeTarget
             case ButtonType.Back:
                 if (cubeToMove == null || !cubeToMove.IsHolding)
                 {
-                    ViewLoader.Instance.GoBack();
+                    //ViewLoader.Instance.GoBack();
                 }
 
                 break;

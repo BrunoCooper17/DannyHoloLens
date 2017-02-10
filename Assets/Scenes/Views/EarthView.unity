@@ -325,13 +325,49 @@ Prefab:
       objectReference: {fileID: 1999703960}
     - target: {fileID: 152912, guid: a5594a1a2c6c29647a9124ea0abfb953, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11462598, guid: a5594a1a2c6c29647a9124ea0abfb953, type: 2}
       propertyPath: speed
       value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 154600, guid: a5594a1a2c6c29647a9124ea0abfb953, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 401610, guid: a5594a1a2c6c29647a9124ea0abfb953, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.727351
+      objectReference: {fileID: 0}
+    - target: {fileID: 401610, guid: a5594a1a2c6c29647a9124ea0abfb953, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.051924706
+      objectReference: {fileID: 0}
+    - target: {fileID: 401610, guid: a5594a1a2c6c29647a9124ea0abfb953, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0.051925138
+      objectReference: {fileID: 0}
+    - target: {fileID: 401610, guid: a5594a1a2c6c29647a9124ea0abfb953, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.6823256
+      objectReference: {fileID: 0}
+    - target: {fileID: 401610, guid: a5594a1a2c6c29647a9124ea0abfb953, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 401610, guid: a5594a1a2c6c29647a9124ea0abfb953, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -93.648994
+      objectReference: {fileID: 0}
+    - target: {fileID: 401610, guid: a5594a1a2c6c29647a9124ea0abfb953, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -4.2139893
+      objectReference: {fileID: 0}
+    - target: {fileID: 401610, guid: a5594a1a2c6c29647a9124ea0abfb953, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -4.2130127
+      objectReference: {fileID: 0}
+    - target: {fileID: 156670, guid: a5594a1a2c6c29647a9124ea0abfb953, type: 2}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -878,6 +914,10 @@ Prefab:
     - target: {fileID: 192134, guid: 6da2c9510ec42844ba8b1ec2349ff83a, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 192134, guid: 6da2c9510ec42844ba8b1ec2349ff83a, type: 2}
+      propertyPath: m_Name
+      value: EarthUpClose_1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6da2c9510ec42844ba8b1ec2349ff83a, type: 2}
