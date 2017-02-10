@@ -21,7 +21,7 @@ public class InnovationTarget : GazeSelectionTarget {
     {
         if(bIsSelected == false)
         {
-            Debug.Log("HAZE INNOVATION TARGET " + name);
+            //Debug.Log("HAZE INNOVATION TARGET " + name);
 
             Color tmpColor = materialBarra.materials[0].color;
             tmpColor.r = 0x4F / 255.0f;
@@ -29,8 +29,6 @@ public class InnovationTarget : GazeSelectionTarget {
             tmpColor.b = 0x4B / 255.0f;
             materialBarra.materials[0].color = tmpColor;
             materialPunta.materials[0].color = tmpColor;
-
-            rotateComponent.speed = 0;
         }
         bIsSelected = true;
     }
@@ -40,7 +38,7 @@ public class InnovationTarget : GazeSelectionTarget {
     {
         if (bIsSelected == true)
         {
-            Debug.Log("EXIT HAZE INNOVATION TARGET " + name);
+            //Debug.Log("EXIT HAZE INNOVATION TARGET " + name);
 
             Color tmpColor = materialBarra.materials[0].color;
             tmpColor.r = 228 / 255.0f;
@@ -48,10 +46,18 @@ public class InnovationTarget : GazeSelectionTarget {
             tmpColor.b = 49 / 255.0f;
             materialBarra.materials[0].color = tmpColor;
             materialPunta.materials[0].color = tmpColor;
-
-            rotateComponent.speed = -10;
         }
         bIsSelected = false;
+    }
+
+    public void StartPlanet()
+    {
+        rotateComponent.speed = -10;
+    }
+
+    public void StopPlanet()
+    {
+        rotateComponent.speed = 0;
     }
 
     // Update is called once per frame

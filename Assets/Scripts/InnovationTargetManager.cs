@@ -42,8 +42,12 @@ public class InnovationTargetManager : MonoBehaviour {
             }
         }
 
-        Ray gazeRay;
+        if (!bEarthFound || !bEarthRealFound)
+        {
+            return;
+        }
 
+        Ray gazeRay;
         if (UnityEngine.VR.VRDevice.isPresent)
         {
             gazeRay = new Ray(Camera.main.transform.position + (Camera.main.nearClipPlane * Camera.main.transform.forward),
@@ -64,26 +68,49 @@ public class InnovationTargetManager : MonoBehaviour {
             if(tmpTarget)
             {
                 tmpTarget.OnGazeSelect();
+                tmpTarget.StopPlanet();
             }
 
+            int contStart = 0;
+
             {
+                int contador = 0;
                 for (int index = 0; index < TargetsCount; index++)
                 {
                     if (info.collider.gameObject != TargetsRef[index])
                     {
                         TargetsRef[index].GetComponent<InnovationTarget>().OnGazeDeselect();
+                        contador++;
                     }
+                }
+
+                if(contador == TargetsCount)
+                {
+                    contStart++;
                 }
             }
 
             {
-                for (int index = 0; index < TargetsCount; index++)
+                int contador = 0;
+                for (int index = 0; index < TargetsRealCount; index++)
                 {
                     if (info.collider.gameObject != TargetsRealRef[index])
                     {
                         TargetsRealRef[index].GetComponent<InnovationTarget>().OnGazeDeselect();
+                        contador++;
                     }
                 }
+
+                if (contador == TargetsRealCount)
+                {
+                    contStart++;
+                }
+            }
+
+            if(contStart == 2)
+            {
+                TargetsRef[0].GetComponent<InnovationTarget>().StartPlanet();
+                TargetsRealRef[0].GetComponent<InnovationTarget>().StartPlanet();
             }
         }
     }

@@ -44,13 +44,13 @@ public class Cursor : Singleton<Cursor>
 
     public CursorStageImage[] stateImages;
     public Material cursorMaterial;
-    private float originalAlpha;
+    public float originalAlpha;
 
-    private Vector3 previousPosition;
-    private bool isOverToolbar;
-    private bool isColliderGalaxyCardPOI;
-    private bool tapped;
-    private CursorState currentState;
+    public Vector3 previousPosition;
+    public bool isOverToolbar;
+    public bool isColliderGalaxyCardPOI;
+    public bool tapped;
+    public CursorState currentState;
 
     private Dictionary<CursorState, CursorStageImage> stateImagesRepository;
 
@@ -318,7 +318,7 @@ public class Cursor : Singleton<Cursor>
 
         bool hasHit = false;
         bool hasUIHit = false;
-        isOverToolbar = false;
+        isOverToolbar = true;
         isColliderGalaxyCardPOI = false;
 
         RaycastHit hitInfo;
