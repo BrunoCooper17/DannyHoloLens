@@ -174,7 +174,7 @@ public class Tool : GazeSelectionTarget, IFadeTarget
             if(type == ToolType.About)
             {
                 //Debug.Log(tmpEarth_01.activeInHierarchy + " " + tmpEarth_02.activeInHierarchy);
-                //tmpEarth_01.SetActive(!tmpEarth_01.activeInHierarchy);
+                tmpEarth_01.SetActive(!tmpEarth_01.activeInHierarchy);
                 tmpEarth_02.SetActive(!tmpEarth_02.activeInHierarchy);
             }
 

@@ -5,13 +5,16 @@ using UnityEngine;
 public class InnovationTargetManager : MonoBehaviour {
 
     public float GazeDistance;
-    public bool bEarthFound = false;
+    public bool bEarthFound = false, bEarthRealFound = false;
     public int TargetsCount = 0;
+    public int TargetsRealCount = 0;
     public GameObject earth = null;
+    public GameObject earthReal = null;
     public GameObject[] TargetsRef;
+    public GameObject[] TargetsRealRef;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -25,6 +28,17 @@ public class InnovationTargetManager : MonoBehaviour {
             for(int index = 0; index < TargetsCount; index++)
             {
                 TargetsRef[index] = earth.transform.GetChild(index).gameObject;
+            }
+        }
+
+        if (!bEarthRealFound && (earthReal = GameObject.Find("EarthUpClose")))
+        {
+            bEarthRealFound = true;
+            TargetsRealCount = earthReal.transform.childCount - 3;
+            TargetsRealRef = new GameObject[TargetsRealCount];
+            for (int index = 0; index < TargetsRealCount; index++)
+            {
+                TargetsRealRef[index] = earthReal.transform.GetChild(index+3).gameObject;
             }
         }
 
@@ -52,11 +66,23 @@ public class InnovationTargetManager : MonoBehaviour {
                 tmpTarget.OnGazeSelect();
             }
 
-            for(int index = 0; index < TargetsCount; index++)
             {
-                if(info.collider.gameObject != TargetsRef[index])
+                for (int index = 0; index < TargetsCount; index++)
                 {
-                    TargetsRef[index].GetComponent<InnovationTarget>().OnGazeDeselect();
+                    if (info.collider.gameObject != TargetsRef[index])
+                    {
+                        TargetsRef[index].GetComponent<InnovationTarget>().OnGazeDeselect();
+                    }
+                }
+            }
+
+            {
+                for (int index = 0; index < TargetsCount; index++)
+                {
+                    if (info.collider.gameObject != TargetsRealRef[index])
+                    {
+                        TargetsRealRef[index].GetComponent<InnovationTarget>().OnGazeDeselect();
+                    }
                 }
             }
         }
