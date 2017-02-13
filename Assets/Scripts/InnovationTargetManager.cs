@@ -12,15 +12,22 @@ public class InnovationTargetManager : MonoBehaviour {
     public GameObject earthReal = null;
     public GameObject[] TargetsRef;
     public GameObject[] TargetsRealRef;
+    public GazeSelection GazeTmp;
 
     // Use this for initialization
     void Start () {
-		
+        GazeTmp = GetComponent<GazeSelection>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if(!bEarthFound && (earth = GameObject.Find("Earth (1)")))
+        if (!((TransitionManager.Instance == null || (!TransitionManager.Instance.InTransition && !TransitionManager.Instance.IsIntro)) &&     // in the middle of a scene transition or if it is the intro, prevent gaze selection
+            (GazeTmp.placementControl == null || !GazeTmp.placementControl.IsHolding)))                                                                       // the cube is being placed, prevent gaze selection
+        {
+            return;
+        }
+
+        if (!bEarthFound && (earth = GameObject.Find("Earth (1)")))
         {
             bEarthFound = true;
             TargetsCount = earth.transform.childCount;
