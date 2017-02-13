@@ -174,8 +174,8 @@ public class Tool : GazeSelectionTarget, IFadeTarget
             if(type == ToolType.About)
             {
                 //Debug.Log(tmpEarth_01.activeInHierarchy + " " + tmpEarth_02.activeInHierarchy);
-                tmpEarth_01.SetActive(!tmpEarth_01.activeInHierarchy);
-                tmpEarth_02.SetActive(!tmpEarth_02.activeInHierarchy);
+//                tmpEarth_01.SetActive(!tmpEarth_01.activeInHierarchy);
+//                tmpEarth_02.SetActive(!tmpEarth_02.activeInHierarchy);
             }
 
             if (TooltipObject != null)
@@ -222,10 +222,13 @@ public class Tool : GazeSelectionTarget, IFadeTarget
 
                 if (type == ToolType.About)
                 {
+                    tmpEarth_01.SetActive(!tmpEarth_01.activeInHierarchy);
+                    tmpEarth_02.SetActive(!tmpEarth_02.activeInHierarchy);
+
                     var aboutSlate = GetComponent<ButtonSlateConnection>();
                     if (aboutSlate)
                     {
-                        aboutSlate.Show();
+                        //aboutSlate.Show();
                     }
                 }
             }
@@ -248,10 +251,13 @@ public class Tool : GazeSelectionTarget, IFadeTarget
 
                 if (type == ToolType.About)
                 {
+                    tmpEarth_01.SetActive(!tmpEarth_01.activeInHierarchy);
+                    tmpEarth_02.SetActive(!tmpEarth_02.activeInHierarchy);
+
                     var aboutSlate = GetComponent<ButtonSlateConnection>();
                     if (aboutSlate)
                     {
-                        aboutSlate.Hide();
+                        //aboutSlate.Hide();
                     }
                 }
             }
