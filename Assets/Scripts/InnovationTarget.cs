@@ -60,6 +60,9 @@ public class InnovationTarget : GazeSelectionTarget {
     {
         Debug.Log("TAPPED");
         bHideCard = true;
+
+        OnGazeDeselect();
+        
         //return true;
     }
 

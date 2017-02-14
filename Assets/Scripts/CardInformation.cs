@@ -17,13 +17,13 @@ public class CardInformation : MonoBehaviour {
 
     public ID_CARD Id_Card;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public void PlayShow()
+    {
+        GetComponent<Animator>().Play("Card_Show", 0, 0.0f);
+    }
+
+    public void PlayHide()
+    {
+        GetComponent<Animator>().Play("Card_Hide", 0, 0.0f);
+    }
 }

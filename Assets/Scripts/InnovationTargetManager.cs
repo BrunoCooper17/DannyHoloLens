@@ -17,6 +17,9 @@ public class InnovationTargetManager : MonoBehaviour {
 
     public CardInformation[] cards;
 
+    public const float COOLDOW_TIME = 2.5f;
+    public float timeCooldown = COOLDOW_TIME;
+
     // Use this for initialization
     void Start () {
         GazeTmp = GetComponent<GazeSelection>();
@@ -30,7 +33,7 @@ public class InnovationTargetManager : MonoBehaviour {
         {
             tmpCards.transform.GetChild(indexCards).gameObject.SetActive(true);
             cards[indexCards] = tmpCards.transform.GetChild(indexCards).gameObject.GetComponent<CardInformation>();
-            tmpCards.transform.GetChild(indexCards).gameObject.SetActive(false);
+            //tmpCards.transform.GetChild(indexCards).gameObject.SetActive(false);
         }
     }
 	
@@ -83,8 +86,10 @@ public class InnovationTargetManager : MonoBehaviour {
                 Camera.main.transform.forward);
         }
 
+        timeCooldown -= Time.deltaTime;
+
         RaycastHit info;
-        if (targetUse == null && Physics.Raycast(gazeRay, out info))
+        if (targetUse == null && timeCooldown < 0.0f && Physics.Raycast(gazeRay, out info))
         {
             InnovationTarget tmpTarget = info.collider.gameObject.GetComponent<InnovationTarget>();
             if(tmpTarget)
@@ -100,7 +105,8 @@ public class InnovationTargetManager : MonoBehaviour {
                 {
                     if(cards[index].Id_Card == tmpTarget.Id_Card)
                     {
-                        cards[index].gameObject.SetActive(true);
+                        //cards[index].gameObject.SetActive(true);
+                        cards[index].PlayShow();
                     }
                 }
             }
@@ -168,7 +174,12 @@ public class InnovationTargetManager : MonoBehaviour {
                 int cardsCount = cards.Length;
                 for (int index = 0; index < cardsCount; index++)
                 {
-                    cards[index].gameObject.SetActive(false);
+                    if(cards[index].gameObject.activeInHierarchy)
+                    {
+                        cards[index].PlayHide();
+                        timeCooldown = COOLDOW_TIME;
+                    }
+                    //cards[index].gameObject.SetActive(false);
                 }
             }
         }
