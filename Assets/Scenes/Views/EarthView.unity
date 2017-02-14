@@ -153,6 +153,7 @@ MonoBehaviour:
   materialPunta: {fileID: 1614799817}
   rotateComponent: {fileID: 0}
   Id_Card: 0
+  bHideCard: 0
 --- !u!1 &119859547
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,7 +247,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 120595509}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 4.14, z: 1.74}
+  m_LocalPosition: {x: 0, y: 3.77, z: -1.35}
   m_LocalScale: {x: 0.78086185, y: 0.7808635, z: 0.7808619}
   m_Children: []
   m_Father: {fileID: 1367545499}
@@ -566,6 +567,7 @@ MonoBehaviour:
   materialPunta: {fileID: 506924361}
   rotateComponent: {fileID: 0}
   Id_Card: 2
+  bHideCard: 0
 --- !u!136 &243312034
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -627,6 +629,7 @@ MonoBehaviour:
   materialPunta: {fileID: 1771126668}
   rotateComponent: {fileID: 0}
   Id_Card: 3
+  bHideCard: 0
 --- !u!136 &274819316
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -689,6 +692,7 @@ MonoBehaviour:
   materialPunta: {fileID: 1572171943}
   rotateComponent: {fileID: 0}
   Id_Card: 2
+  bHideCard: 0
 --- !u!136 &303987861
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1249,6 +1253,7 @@ MonoBehaviour:
   materialPunta: {fileID: 903659537}
   rotateComponent: {fileID: 0}
   Id_Card: 6
+  bHideCard: 0
 --- !u!136 &471574303
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1287,7 +1292,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 471735075}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: -3.81, z: -0.77}
+  m_LocalPosition: {x: 0, y: -3.55, z: -1.27}
   m_LocalScale: {x: 0.7808606, y: 0.78086174, z: 0.7808621}
   m_Children: []
   m_Father: {fileID: 1722457163}
@@ -1746,6 +1751,7 @@ MonoBehaviour:
   materialPunta: {fileID: 451592659}
   rotateComponent: {fileID: 0}
   Id_Card: 4
+  bHideCard: 0
 --- !u!136 &623248657
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1784,7 +1790,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 682495845}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.78, y: -0, z: -0.93}
+  m_LocalPosition: {x: -3.67, y: 0, z: -1.4}
   m_LocalScale: {x: 0.7809192, y: 0.78091866, z: 0.7809199}
   m_Children: []
   m_Father: {fileID: 471574301}
@@ -2181,6 +2187,7 @@ MonoBehaviour:
   materialPunta: {fileID: 430547581}
   rotateComponent: {fileID: 0}
   Id_Card: 1
+  bHideCard: 0
 --- !u!136 &861507204
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2242,6 +2249,7 @@ MonoBehaviour:
   materialPunta: {fileID: 1146519380}
   rotateComponent: {fileID: 0}
   Id_Card: 3
+  bHideCard: 0
 --- !u!136 &899413065
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2416,7 +2424,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1016428043}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: -3.81, z: -0.77}
+  m_LocalPosition: {x: 0, y: -3.55, z: -1.27}
   m_LocalScale: {x: 0.7808606, y: 0.78086174, z: 0.7808621}
   m_Children: []
   m_Father: {fileID: 2039505998}
@@ -3231,6 +3239,7 @@ MonoBehaviour:
   materialPunta: {fileID: 1063214422}
   rotateComponent: {fileID: 0}
   Id_Card: 0
+  bHideCard: 0
 --- !u!136 &1248670451
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3273,7 +3282,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1267486130}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.78, y: -0, z: -0.93}
+  m_LocalPosition: {x: -3.67, y: 0, z: -1.4}
   m_LocalScale: {x: 0.7809192, y: 0.78091866, z: 0.7809199}
   m_Children: []
   m_Father: {fileID: 1839091343}
@@ -3439,7 +3448,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1317279744}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 4.14, z: 1.74}
+  m_LocalPosition: {x: 0, y: 3.77, z: -1.35}
   m_LocalScale: {x: 0.78086185, y: 0.7808635, z: 0.7808619}
   m_Children: []
   m_Father: {fileID: 623248655}
@@ -3546,6 +3555,7 @@ MonoBehaviour:
   materialPunta: {fileID: 343811421}
   rotateComponent: {fileID: 0}
   Id_Card: 4
+  bHideCard: 0
 --- !u!136 &1367545501
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3971,6 +3981,7 @@ MonoBehaviour:
   materialPunta: {fileID: 947963365}
   rotateComponent: {fileID: 0}
   Id_Card: 1
+  bHideCard: 0
 --- !u!136 &1547930608
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4457,6 +4468,7 @@ MonoBehaviour:
   materialPunta: {fileID: 231304083}
   rotateComponent: {fileID: 0}
   Id_Card: 5
+  bHideCard: 0
 --- !u!136 &1722457165
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4563,7 +4575,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1748096566}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.07, y: -0, z: -0}
+  m_LocalPosition: {x: -3.62, y: 0, z: -1.62}
   m_LocalScale: {x: 0.78086317, y: 0.78086436, z: 0.7808628}
   m_Children: []
   m_Father: {fileID: 1547930606}
@@ -4968,6 +4980,7 @@ MonoBehaviour:
   materialPunta: {fileID: 119859549}
   rotateComponent: {fileID: 0}
   Id_Card: 6
+  bHideCard: 0
 --- !u!136 &1839091345
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5006,7 +5019,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1847746650}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.07, y: -0, z: -0}
+  m_LocalPosition: {x: -3.62, y: 0, z: -1.62}
   m_LocalScale: {x: 0.78086317, y: 0.78086436, z: 0.7808628}
   m_Children: []
   m_Father: {fileID: 861507202}
@@ -5828,6 +5841,7 @@ MonoBehaviour:
   materialPunta: {fileID: 1734480840}
   rotateComponent: {fileID: 0}
   Id_Card: 5
+  bHideCard: 0
 --- !u!136 &2039506000
 CapsuleCollider:
   m_ObjectHideFlags: 0
