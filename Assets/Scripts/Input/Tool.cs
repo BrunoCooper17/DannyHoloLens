@@ -41,9 +41,6 @@ public class Tool : GazeSelectionTarget, IFadeTarget
 
     private float currentOpacity = 1;
 
-    public GameObject tmpEarth_01;
-    public GameObject tmpEarth_02;
-
     public float Opacity
     {
         get
@@ -139,13 +136,6 @@ public class Tool : GazeSelectionTarget, IFadeTarget
             PlayerInputManager.Instance.TapPressAction += PlayEngagedSound;
             PlayerInputManager.Instance.TapReleaseAction += PlayDisengagedSound;
         }
-
-        if (type == ToolType.About)
-        {
-            tmpEarth_01 = GameObject.Find("Earth (1)");
-            tmpEarth_02 = GameObject.Find("EarthUpClose");
-            tmpEarth_02.SetActive(false);
-        }
     }
 
     private void OnDestroy()
@@ -222,9 +212,6 @@ public class Tool : GazeSelectionTarget, IFadeTarget
 
                 if (type == ToolType.About)
                 {
-                    tmpEarth_01.SetActive(!tmpEarth_01.activeInHierarchy);
-                    tmpEarth_02.SetActive(!tmpEarth_02.activeInHierarchy);
-
                     var aboutSlate = GetComponent<ButtonSlateConnection>();
                     if (aboutSlate)
                     {
@@ -251,9 +238,6 @@ public class Tool : GazeSelectionTarget, IFadeTarget
 
                 if (type == ToolType.About)
                 {
-                    tmpEarth_01.SetActive(!tmpEarth_01.activeInHierarchy);
-                    tmpEarth_02.SetActive(!tmpEarth_02.activeInHierarchy);
-
                     var aboutSlate = GetComponent<ButtonSlateConnection>();
                     if (aboutSlate)
                     {

@@ -27,6 +27,9 @@ public class Button : GazeSelectionTarget, IFadeTarget
 
     public event Action<ButtonType> ButtonPressed;
 
+    public GameObject tmpEarth_01;
+    public GameObject tmpEarth_02;
+
     public static bool HasGaze
     {
         get
@@ -122,6 +125,13 @@ public class Button : GazeSelectionTarget, IFadeTarget
         if (TooltipObject != null)
         {
             TooltipObject.SetActive(false);
+        }
+
+        if (type == ButtonType.About)
+        {
+            tmpEarth_01 = GameObject.Find("Earth (1)");
+            tmpEarth_02 = GameObject.Find("EarthUpClose");
+            tmpEarth_02.SetActive(false);
         }
     }
 
@@ -238,6 +248,12 @@ public class Button : GazeSelectionTarget, IFadeTarget
             case ButtonType.Show:
             case ButtonType.Hide:
                 ToolManager.Instance.ToggleTools();
+                break;
+
+            case ButtonType.About:
+                Debug.Log("BUTOON ABOUT");
+                tmpEarth_01.SetActive(!tmpEarth_01.activeInHierarchy);
+                tmpEarth_02.SetActive(!tmpEarth_02.activeInHierarchy);
                 break;
         }
     }

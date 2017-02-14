@@ -142,6 +142,8 @@ MonoBehaviour:
   HightlightMaterial: {fileID: 2100000, guid: 80358117741efe74f9e7e03669f1a192, type: 2}
   type: 1
   IsDisabled: 0
+  tmpEarth_01: {fileID: 0}
+  tmpEarth_02: {fileID: 0}
 --- !u!65 &32001446
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1835,6 +1837,8 @@ MonoBehaviour:
   HightlightMaterial: {fileID: 2100000, guid: df03dc2765e8036448669e25ae6f59ad, type: 2}
   type: 3
   IsDisabled: 0
+  tmpEarth_01: {fileID: 0}
+  tmpEarth_02: {fileID: 0}
 --- !u!65 &487631416
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2485,6 +2489,8 @@ MonoBehaviour:
   HightlightMaterial: {fileID: 2100000, guid: 64ddf4bc8ea2c9f40b6de19afd3633f2, type: 2}
   type: 0
   IsDisabled: 0
+  tmpEarth_01: {fileID: 0}
+  tmpEarth_02: {fileID: 0}
 --- !u!65 &709257084
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2841,8 +2847,6 @@ MonoBehaviour:
   MaxRotationAngle: 40
   ClickerRotationSpeed: 0.1
   selected: 0
-  tmpEarth_01: {fileID: 0}
-  tmpEarth_02: {fileID: 0}
 --- !u!65 &792860936
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3336,6 +3340,8 @@ MonoBehaviour:
   HightlightMaterial: {fileID: 2100000, guid: 9c6ae668c285f5b4a888cd67774d533c, type: 2}
   type: 4
   IsDisabled: 0
+  tmpEarth_01: {fileID: 0}
+  tmpEarth_02: {fileID: 0}
 --- !u!65 &951677438
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3484,8 +3490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1017416626}
   - component: {fileID: 1017416629}
-  - component: {fileID: 1017416628}
-  - component: {fileID: 1017416627}
+  - component: {fileID: 1017416630}
   m_Layer: 10
   m_Name: About
   m_TagString: Untagged
@@ -3508,48 +3513,6 @@ Transform:
   m_Father: {fileID: 671734371}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1017416627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11456760, guid: ee437c654e6887246bba60bee77841eb,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1017416625}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75e6bdd45a862de4c9372f0f0b6c13aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  VoiceCommands:
-  - about
-  TooltipObject: {fileID: 1662361033}
-  DefaultMaterial: {fileID: 2100000, guid: 276e812b7ef95924ba8120462e9431ee, type: 2}
-  HighlightMaterial: {fileID: 2100000, guid: 428ede958c2f97b46a2f673101bf889f, type: 2}
-  SelectedMaterial: {fileID: 2100000, guid: dfe919f9ae498374c90d0cd7a45f928e, type: 2}
-  type: 4
-  PanSpeed: 0.25
-  RotationSpeed: 30
-  ScaleSpeed: 1
-  PanControllerSpeed: 0.75
-  PanHandSpeed: 2
-  MaxRotationAngle: 40
-  ClickerRotationSpeed: 0.1
-  selected: 0
-  tmpEarth_01: {fileID: 0}
-  tmpEarth_02: {fileID: 0}
---- !u!114 &1017416628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11474072, guid: ee437c654e6887246bba60bee77841eb,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1017416625}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bfd812041dca5d47884b8898e151017, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Slate: {fileID: 711744660}
 --- !u!65 &1017416629
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3563,6 +3526,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.2, z: 0.01}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1017416630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1017416625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a51c18e5b5b607e489dd08e8f017fa7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VoiceCommands: []
+  TooltipObject: {fileID: 1662361033}
+  DefaultMaterial: {fileID: 2100000, guid: 276e812b7ef95924ba8120462e9431ee, type: 2}
+  HightlightMaterial: {fileID: 2100000, guid: 428ede958c2f97b46a2f673101bf889f, type: 2}
+  type: 5
+  IsDisabled: 0
+  tmpEarth_01: {fileID: 0}
+  tmpEarth_02: {fileID: 0}
 --- !u!1 &1054733994
 GameObject:
   m_ObjectHideFlags: 0
@@ -5783,8 +5765,6 @@ MonoBehaviour:
   MaxRotationAngle: 40
   ClickerRotationSpeed: 1
   selected: 0
-  tmpEarth_01: {fileID: 0}
-  tmpEarth_02: {fileID: 0}
 --- !u!65 &1483408250
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6516,6 +6496,8 @@ MonoBehaviour:
   HightlightMaterial: {fileID: 2100000, guid: 2672e064e86712346947e129ccf0bd0a, type: 2}
   type: 2
   IsDisabled: 0
+  tmpEarth_01: {fileID: 0}
+  tmpEarth_02: {fileID: 0}
 --- !u!1 &1699655683
 GameObject:
   m_ObjectHideFlags: 0
