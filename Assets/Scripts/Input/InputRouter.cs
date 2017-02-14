@@ -55,6 +55,11 @@ public class InputRouter : Singleton<InputRouter>
     private GestureRecognizer gestureRecognizer;
     private bool eventsAreRegistered = false;
 
+    public GestureRecognizer getGestureRecognizer()
+    {
+        return gestureRecognizer;
+    }
+
     private void TryToRegisterEvents()
     {
         if (!eventsAreRegistered && gestureRecognizer != null)

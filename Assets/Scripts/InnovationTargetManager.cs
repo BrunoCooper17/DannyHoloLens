@@ -13,11 +13,26 @@ public class InnovationTargetManager : MonoBehaviour {
     public GameObject[] TargetsRef;
     public GameObject[] TargetsRealRef;
     public GazeSelection GazeTmp;
+    public InnovationTarget targetUse = null;
+
+    public CardInformation[] cards;
 
     // Use this for initialization
     void Start () {
         GazeTmp = GetComponent<GazeSelection>();
-	}
+        GameObject tmpCards = GameObject.Find("CameraRigMain");
+
+        
+        int cardsCount = tmpCards.transform.childCount;
+        cards = new CardInformation[cardsCount];
+        
+        for(int indexCards=0; indexCards<cardsCount; indexCards++)
+        {
+            tmpCards.transform.GetChild(indexCards).gameObject.SetActive(true);
+            cards[indexCards] = tmpCards.transform.GetChild(indexCards).gameObject.GetComponent<CardInformation>();
+            tmpCards.transform.GetChild(indexCards).gameObject.SetActive(false);
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -69,15 +84,28 @@ public class InnovationTargetManager : MonoBehaviour {
         }
 
         RaycastHit info;
-        if (Physics.Raycast(gazeRay, out info))
+        if (targetUse == null && Physics.Raycast(gazeRay, out info))
         {
             InnovationTarget tmpTarget = info.collider.gameObject.GetComponent<InnovationTarget>();
             if(tmpTarget)
             {
                 tmpTarget.OnGazeSelect();
                 tmpTarget.StopPlanet();
+                tmpTarget.bHideCard = false;
+                targetUse = tmpTarget;
+
+                // SHOW CARD
+                int cardsCount = cards.Length;
+                for(int index=0; index<cardsCount; index++)
+                {
+                    if(cards[index].Id_Card == tmpTarget.Id_Card)
+                    {
+                        cards[index].gameObject.SetActive(true);
+                    }
+                }
             }
 
+            /*
             int contStart = 0;
 
             {
@@ -118,6 +146,30 @@ public class InnovationTargetManager : MonoBehaviour {
             {
                 TargetsRef[0].GetComponent<InnovationTarget>().StartPlanet();
                 TargetsRealRef[0].GetComponent<InnovationTarget>().StartPlanet();
+
+                // HIDE CARD
+                int cardsCount = cards.Length;
+                for (int index = 0; index < cardsCount; index++)
+                {
+                    cards[index].gameObject.SetActive(false);
+                }
+            }*/
+        }
+
+        {
+            // THIS IS NOT THE BEST SOLUTION, BUT IT WORKS (FIX IT PLEASE)
+            if (targetUse && targetUse.bHideCard)
+            {
+                targetUse.StartPlanet();
+                targetUse.bHideCard = false;
+                targetUse = null;
+
+                // HIDE CARD
+                int cardsCount = cards.Length;
+                for (int index = 0; index < cardsCount; index++)
+                {
+                    cards[index].gameObject.SetActive(false);
+                }
             }
         }
     }

@@ -1581,6 +1581,7 @@ MonoBehaviour:
   TargetsRef: []
   TargetsRealRef: []
   GazeTmp: {fileID: 0}
+  cards: []
 --- !u!1 &936425216
 GameObject:
   m_ObjectHideFlags: 0
@@ -2620,13 +2621,14 @@ GameObject:
   - component: {fileID: 1504018145}
   - component: {fileID: 1504018144}
   - component: {fileID: 1504018143}
+  - component: {fileID: 1504018146}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Card_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1504018142
 Transform:
   m_ObjectHideFlags: 0
@@ -2698,6 +2700,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1504018141}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1504018146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1504018141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 579037792cda59c4a9c062c80d26e7e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1538102216
 GameObject:
   m_ObjectHideFlags: 0

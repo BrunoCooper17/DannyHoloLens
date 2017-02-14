@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VR.WSA.Input;
 
 public class InnovationTarget : GazeSelectionTarget {
 
@@ -11,10 +12,15 @@ public class InnovationTarget : GazeSelectionTarget {
 
     public ConstantRotateAxis rotateComponent;
 
+    public CardInformation.ID_CARD Id_Card;
+    public bool bHideCard = false;
+
     // Use this for initialization
     void Start () {
         rotateComponent = GetComponentInParent<ConstantRotateAxis>();
-	}
+
+        InputRouter.Instance.getGestureRecognizer().TappedEvent += OnTapped;
+    }
 
     // 4F 28 4B
     public override void OnGazeSelect()
@@ -50,6 +56,13 @@ public class InnovationTarget : GazeSelectionTarget {
         bIsSelected = false;
     }
 
+    public void OnTapped(InteractionSourceKind source, int tapCount, Ray ray)
+    {
+        Debug.Log("TAPPED");
+        bHideCard = true;
+        //return true;
+    }
+
     public void StartPlanet()
     {
         rotateComponent.speed = -10;
@@ -59,9 +72,4 @@ public class InnovationTarget : GazeSelectionTarget {
     {
         rotateComponent.speed = 0;
     }
-
-    // Update is called once per frame
-    void Update () {
-		
-	}
 }

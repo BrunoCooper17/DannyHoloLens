@@ -152,6 +152,7 @@ MonoBehaviour:
   materialBarra: {fileID: 1866012349}
   materialPunta: {fileID: 1614799817}
   rotateComponent: {fileID: 0}
+  Id_Card: 0
 --- !u!1 &119859547
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,6 +565,7 @@ MonoBehaviour:
   materialBarra: {fileID: 1022031976}
   materialPunta: {fileID: 506924361}
   rotateComponent: {fileID: 0}
+  Id_Card: 2
 --- !u!136 &243312034
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -624,6 +626,7 @@ MonoBehaviour:
   materialBarra: {fileID: 619008629}
   materialPunta: {fileID: 1771126668}
   rotateComponent: {fileID: 0}
+  Id_Card: 3
 --- !u!136 &274819316
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -685,6 +688,7 @@ MonoBehaviour:
   materialBarra: {fileID: 2018348571}
   materialPunta: {fileID: 1572171943}
   rotateComponent: {fileID: 0}
+  Id_Card: 2
 --- !u!136 &303987861
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1244,6 +1248,7 @@ MonoBehaviour:
   materialBarra: {fileID: 711077034}
   materialPunta: {fileID: 903659537}
   rotateComponent: {fileID: 0}
+  Id_Card: 6
 --- !u!136 &471574303
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1740,6 +1745,7 @@ MonoBehaviour:
   materialBarra: {fileID: 1525982553}
   materialPunta: {fileID: 451592659}
   rotateComponent: {fileID: 0}
+  Id_Card: 4
 --- !u!136 &623248657
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2174,6 +2180,7 @@ MonoBehaviour:
   materialBarra: {fileID: 1225861604}
   materialPunta: {fileID: 430547581}
   rotateComponent: {fileID: 0}
+  Id_Card: 1
 --- !u!136 &861507204
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2234,6 +2241,7 @@ MonoBehaviour:
   materialBarra: {fileID: 1679304884}
   materialPunta: {fileID: 1146519380}
   rotateComponent: {fileID: 0}
+  Id_Card: 3
 --- !u!136 &899413065
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3222,6 +3230,7 @@ MonoBehaviour:
   materialBarra: {fileID: 729162210}
   materialPunta: {fileID: 1063214422}
   rotateComponent: {fileID: 0}
+  Id_Card: 0
 --- !u!136 &1248670451
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3536,6 +3545,7 @@ MonoBehaviour:
   materialBarra: {fileID: 792874002}
   materialPunta: {fileID: 343811421}
   rotateComponent: {fileID: 0}
+  Id_Card: 4
 --- !u!136 &1367545501
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3960,6 +3970,7 @@ MonoBehaviour:
   materialBarra: {fileID: 1627630973}
   materialPunta: {fileID: 947963365}
   rotateComponent: {fileID: 0}
+  Id_Card: 1
 --- !u!136 &1547930608
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4445,6 +4456,7 @@ MonoBehaviour:
   materialBarra: {fileID: 1206995220}
   materialPunta: {fileID: 231304083}
   rotateComponent: {fileID: 0}
+  Id_Card: 5
 --- !u!136 &1722457165
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4955,6 +4967,7 @@ MonoBehaviour:
   materialBarra: {fileID: 2013604599}
   materialPunta: {fileID: 119859549}
   rotateComponent: {fileID: 0}
+  Id_Card: 6
 --- !u!136 &1839091345
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5814,6 +5827,7 @@ MonoBehaviour:
   materialBarra: {fileID: 611225822}
   materialPunta: {fileID: 1734480840}
   rotateComponent: {fileID: 0}
+  Id_Card: 5
 --- !u!136 &2039506000
 CapsuleCollider:
   m_ObjectHideFlags: 0
