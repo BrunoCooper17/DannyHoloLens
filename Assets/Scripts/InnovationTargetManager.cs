@@ -107,6 +107,8 @@ public class InnovationTargetManager : MonoBehaviour {
                     {
                         //cards[index].gameObject.SetActive(true);
                         cards[index].PlayShow();
+
+                        //Invoke("AutoHide", 5.0f);
                     }
                 }
             }
@@ -183,5 +185,11 @@ public class InnovationTargetManager : MonoBehaviour {
                 }
             }
         }
+    }
+
+    void AutoHide()
+    {
+        targetUse.bHideCard = true;
+        targetUse.OnGazeDeselect();
     }
 }

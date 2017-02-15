@@ -20,8 +20,12 @@ public class CardInformation : MonoBehaviour {
     public Animator animator;
 
     public Vector3 tmpPositionCursor;
-    public float alpha = 0.95f;
+    public float alpha = 0.05f;
     public GameObject cursorLocation;
+
+    public bool bcheck = false;
+
+    private float acum=0;
 
     private void Start()
     {
@@ -33,21 +37,32 @@ public class CardInformation : MonoBehaviour {
     {
         tmpPositionCursor = (alpha * (cursorLocation.transform.position.normalized)) + (1.0f - alpha) * tmpPositionCursor;
 
-        if (animator.GetCurrentAnimatorClipInfo(0)[0].clip.name == "Card_Show" && (animator.GetCurrentAnimatorStateInfo(0).length*2 <
-            animator.GetCurrentAnimatorStateInfo(0).normalizedTime))
+        acum -= Time.deltaTime;
+
+        if (bcheck && acum < 0.0f)
         {
-            animator.Stop();
+            animator.enabled = false;
             transform.position = tmpPositionCursor;
         }
     }
 
     public void PlayShow()
     {
-        GetComponent<Animator>().Play("Card_Show", 0, 0.0f);
+        bcheck = true;
+        animator.Play("Card_Show", 0, 0.0f);
+        acum = 0.5f;
     }
 
     public void PlayHide()
     {
-        GetComponent<Animator>().Play("Card_Hide", 0, 0.0f);
+        bcheck = false;
+
+        animator.enabled = true;
+        animator.Play("Card_Hide", 0, 0.0f);
+    }
+
+    void hideCard()
+    {
+        animator.Play("Card_Hide", 0, 0.0f);
     }
 }
