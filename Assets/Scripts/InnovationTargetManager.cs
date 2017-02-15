@@ -89,10 +89,11 @@ public class InnovationTargetManager : MonoBehaviour {
         timeCooldown -= Time.deltaTime;
 
         RaycastHit info;
-        if (targetUse == null && timeCooldown < 0.0f && Physics.Raycast(gazeRay, out info))
+        bool bTarget = Physics.Raycast(gazeRay, out info);
+        if (targetUse == null && timeCooldown < 0.0f && bTarget)
         {
             InnovationTarget tmpTarget = info.collider.gameObject.GetComponent<InnovationTarget>();
-            if(tmpTarget)
+            if (tmpTarget)
             {
                 tmpTarget.OnGazeSelect();
                 tmpTarget.StopPlanet();
