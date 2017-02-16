@@ -58,7 +58,6 @@ public class InnovationTarget : GazeSelectionTarget {
 
     public void OnTapped(InteractionSourceKind source, int tapCount, Ray ray)
     {
-        Debug.Log("TAPPED");
         bHideCard = true;
 
         OnGazeDeselect();

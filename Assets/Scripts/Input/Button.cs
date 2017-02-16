@@ -29,6 +29,10 @@ public class Button : GazeSelectionTarget, IFadeTarget
 
     public GameObject tmpEarth_01;
     public GameObject tmpEarth_02;
+    public GameObject tmpEarth;
+    private Vector3 tmpEarthPos;
+
+    public GameObject tmpEarthCloseup;
 
     public static bool HasGaze
     {
@@ -126,12 +130,19 @@ public class Button : GazeSelectionTarget, IFadeTarget
         {
             TooltipObject.SetActive(false);
         }
+        GameObject.Find("PlanetStub").transform.GetChild(2).gameObject.SetActive(false);
+        GameObject.Find("PlanetStub").transform.GetChild(1).gameObject.SetActive(true);
 
         if (type == ButtonType.About)
         {
             tmpEarth_01 = GameObject.Find("Earth (1)");
             tmpEarth_02 = GameObject.Find("EarthUpClose");
-            tmpEarth_02.SetActive(false);
+            tmpEarth_01.SetActive(false);
+        }
+        if (type == ButtonType.Reset)
+        {
+            tmpEarth = GameObject.Find("PlanetStub").transform.GetChild(1).gameObject;
+            tmpEarth.SetActive(true);
         }
     }
 
@@ -230,6 +241,46 @@ public class Button : GazeSelectionTarget, IFadeTarget
                 break;
 
             case ButtonType.Reset:
+                /*
+                GameObject tmpTools = GameObject.Find("ToolsController");
+                tmpEarth.transform.position = tmpTools.transform.position + Camera.main.transform.forward * 0.9f;
+                tmpEarth.transform.position = tmpEarthPos;
+
+                Debug.Log("RESET " + tmpEarth.transform.position + " " + tmpTools.transform.position);
+                Debug.Log(GameObject.Find("ViewLoader").transform.position);
+                Debug.Log(GameObject.Find("EarthViewContent").transform.position);
+                Debug.Log(GameObject.Find("SceneLoadHider").transform.position);
+                Debug.Log(GameObject.Find("PlanetStub").transform.position);
+                Debug.Log(GameObject.Find("EarthUpCloseWireframe").transform.position);
+                Debug.Log(GameObject.Find("Earth (1)").transform.position);
+                */
+
+                /*
+RESET (0.5, -0.1, 1.7) (0.3, -0.1, 0.8)
+(0.5, -0.1, 1.7)
+(0.5, -0.1, 1.7)
+(0.5, -0.1, 1.7)
+(0.5, -0.1, 1.7)
+(0.5, -0.1, 1.7)
+Holographic Tracking State Lost. New State: 4
+Holographic Tracking State Active.
+RESET (0.1, -0.7, 1.6) (0.0, -0.7, 0.7)
+(0.1, -0.7, 1.6)
+(0.1, -0.7, 1.6)
+(0.1, -0.7, 1.6)
+(0.1, -0.7, 1.6)
+(0.1, -0.7, 1.6)
+                 */
+                 
+                Debug.Log("LOG SCALES " + tmpEarth.transform.localScale + " " + tmpEarth.transform.lossyScale);
+                for(int index = 0; index < tmpEarth.transform.childCount; index++)
+                {
+                    if(tmpEarth.transform.GetChild(index).gameObject)
+                        Debug.Log(tmpEarth.transform.GetChild(index).localScale + " " + tmpEarth.transform.GetChild(index).lossyScale);
+                }
+
+                Debug.Log(tmpEarth.transform.parent.transform.localScale + " " + tmpEarth.transform.parent.transform.lossyScale);
+
                 if (cubeToMove == null || !cubeToMove.IsHolding)
                 {
                     if (TransitionManager.Instance)
@@ -237,7 +288,6 @@ public class Button : GazeSelectionTarget, IFadeTarget
                         TransitionManager.Instance.ResetView();
                     }
                 }
-
                 break;
 
             case ButtonType.MoveCube:
@@ -252,6 +302,12 @@ public class Button : GazeSelectionTarget, IFadeTarget
 
             case ButtonType.About:
                 Debug.Log("BUTOON ABOUT");
+
+                if(tmpEarth_01 == null)
+                {
+                    tmpEarth_01 = GameObject.Find("Earth");
+                }
+
                 tmpEarth_01.SetActive(!tmpEarth_01.activeInHierarchy);
                 tmpEarth_02.SetActive(!tmpEarth_02.activeInHierarchy);
                 break;

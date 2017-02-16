@@ -16,6 +16,9 @@ public class ViewLoader : Singleton<ViewLoader>
     public string StartingView;
     public MovableAudioSource movableAudioSource;
 
+    public GameObject EarthNormal;
+    public GameObject EarthWire;
+
     public string CurrentView
     {
         get; private set;

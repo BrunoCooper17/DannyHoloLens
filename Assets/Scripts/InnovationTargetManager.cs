@@ -171,19 +171,20 @@ public class InnovationTargetManager : MonoBehaviour {
             {
                 targetUse.StartPlanet();
                 targetUse.bHideCard = false;
-                targetUse = null;
-
+                
                 // HIDE CARD
                 int cardsCount = cards.Length;
                 for (int index = 0; index < cardsCount; index++)
                 {
-                    if(cards[index].gameObject.activeInHierarchy)
+                    if(cards[index].Id_Card == targetUse.Id_Card)
                     {
                         cards[index].PlayHide();
                         timeCooldown = COOLDOW_TIME;
                     }
                     //cards[index].gameObject.SetActive(false);
                 }
+
+                targetUse = null;
             }
         }
     }

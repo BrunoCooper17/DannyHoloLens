@@ -20,7 +20,8 @@ public class CardInformation : MonoBehaviour {
     public Animator animator;
 
     public Vector3 tmpPositionCursor;
-    public float alpha = 0.05f;
+    public Vector3 tmpRot;
+    public float alpha = 0.15f;
     public GameObject cursorLocation;
 
     public bool bcheck = false;
@@ -28,6 +29,8 @@ public class CardInformation : MonoBehaviour {
     private float acum = 100000;
     private float checkAcum = 0;
     public float mag;
+
+    public Vector3 rotation;
 
     public Transform ParentRef;
 
@@ -39,28 +42,20 @@ public class CardInformation : MonoBehaviour {
 
     void Update()
     {
-        /*
-        //if (name == "Card_01 (1)")
-        //    Debug.Log("aSDASDASDqweqdwa " + name + " " + (tmpPositionCursor - (Camera.main.transform.forward)).magnitude);
+        alpha = 0.15f;
 
-        mag = Mathf.Abs(Vector3.Distance(tmpPositionCursor, Camera.main.transform.forward));
-        if (mag < 1.7f)
-        {/**/
-            tmpPositionCursor = (alpha * (cursorLocation.transform.position.normalized)) + (1.0f - alpha) * tmpPositionCursor;
-            transform.position = tmpPositionCursor;
-            /*checkAcum = 1.0f;
-        }
-        else
+        Vector3 tmpCursorPos = cursorLocation.transform.position;
+        tmpCursorPos.Normalize();
+        tmpPositionCursor = (alpha * (tmpCursorPos.normalized)) + (1.0f - alpha) * tmpPositionCursor;
+        transform.position = tmpPositionCursor + Camera.main.transform.up * 0.05f;
+
+        Quaternion rot = Quaternion.LookRotation(-Camera.main.transform.up, -Camera.main.transform.forward);
+        tmpRot = (alpha * (rot.eulerAngles)) + (1.0f - alpha) * tmpRot;
+
+        if (!animator.enabled)
         {
-            checkAcum -= Time.deltaTime;
-            if( checkAcum < 0.0f)
-            {
-                //Debug.Log(name + " Checking");
-                checkAcum = 1.0f;
-                tmpPositionCursor = cursorLocation.transform.position.normalized;
-            }
-        }/**/
-        
+            transform.eulerAngles = tmpRot;
+        }
 
         acum -= Time.deltaTime;
 
@@ -79,6 +74,8 @@ public class CardInformation : MonoBehaviour {
         acum = 0.6f;
         bcheck = true;
         animator.Play("Card_Show", 0, 0.0f);
+
+        rotation = transform.eulerAngles;
     }
 
     public void PlayHide()
@@ -90,6 +87,8 @@ public class CardInformation : MonoBehaviour {
 
         animator.enabled = true;
         animator.Play("Card_Hide", 0, 0.0f);
+
+        transform.eulerAngles = rotation;
     }
 
     void hideCard()
