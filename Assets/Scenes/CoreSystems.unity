@@ -144,6 +144,8 @@ MonoBehaviour:
   IsDisabled: 0
   tmpEarth_01: {fileID: 0}
   tmpEarth_02: {fileID: 0}
+  tmpEarth: {fileID: 0}
+  tmpEarthCloseup: {fileID: 0}
 --- !u!65 &32001446
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -830,10 +832,12 @@ MonoBehaviour:
   Id_Card: 1
   animator: {fileID: 0}
   tmpPositionCursor: {x: 0, y: 0, z: 0}
+  tmpRot: {x: 0, y: 0, z: 0}
   alpha: 0.5
   cursorLocation: {fileID: 0}
   bcheck: 0
   mag: 0
+  rotation: {x: 0, y: 0, z: 0}
   ParentRef: {fileID: 0}
 --- !u!23 &477204412
 MeshRenderer:
@@ -998,6 +1002,8 @@ MonoBehaviour:
   IsDisabled: 0
   tmpEarth_01: {fileID: 0}
   tmpEarth_02: {fileID: 0}
+  tmpEarth: {fileID: 0}
+  tmpEarthCloseup: {fileID: 0}
 --- !u!65 &487631416
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1231,10 +1237,12 @@ MonoBehaviour:
   Id_Card: 4
   animator: {fileID: 0}
   tmpPositionCursor: {x: 0, y: 0, z: 0}
+  tmpRot: {x: 0, y: 0, z: 0}
   alpha: 0.5
   cursorLocation: {fileID: 0}
   bcheck: 0
   mag: 0
+  rotation: {x: 0, y: 0, z: 0}
   ParentRef: {fileID: 0}
 --- !u!23 &667043791
 MeshRenderer:
@@ -1575,6 +1583,8 @@ MonoBehaviour:
   IsDisabled: 0
   tmpEarth_01: {fileID: 0}
   tmpEarth_02: {fileID: 0}
+  tmpEarth: {fileID: 0}
+  tmpEarthCloseup: {fileID: 0}
 --- !u!65 &709257084
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2262,6 +2272,8 @@ MonoBehaviour:
   IsDisabled: 0
   tmpEarth_01: {fileID: 0}
   tmpEarth_02: {fileID: 0}
+  tmpEarth: {fileID: 0}
+  tmpEarthCloseup: {fileID: 0}
 --- !u!65 &951677438
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2344,10 +2356,12 @@ MonoBehaviour:
   Id_Card: 5
   animator: {fileID: 0}
   tmpPositionCursor: {x: 0, y: 0, z: 0}
+  tmpRot: {x: 0, y: 0, z: 0}
   alpha: 0.5
   cursorLocation: {fileID: 0}
   bcheck: 0
   mag: 0
+  rotation: {x: 0, y: 0, z: 0}
   ParentRef: {fileID: 0}
 --- !u!23 &1004526539
 MeshRenderer:
@@ -2468,6 +2482,8 @@ MonoBehaviour:
   IsDisabled: 0
   tmpEarth_01: {fileID: 0}
   tmpEarth_02: {fileID: 0}
+  tmpEarth: {fileID: 0}
+  tmpEarthCloseup: {fileID: 0}
 --- !u!1 &1054733994
 GameObject:
   m_ObjectHideFlags: 0
@@ -2607,10 +2623,12 @@ MonoBehaviour:
   Id_Card: 6
   animator: {fileID: 0}
   tmpPositionCursor: {x: 0, y: 0, z: 0}
+  tmpRot: {x: 0, y: 0, z: 0}
   alpha: 0.5
   cursorLocation: {fileID: 0}
   bcheck: 0
   mag: 0
+  rotation: {x: 0, y: 0, z: 0}
   ParentRef: {fileID: 0}
 --- !u!23 &1091016897
 MeshRenderer:
@@ -2736,10 +2754,12 @@ MonoBehaviour:
   Id_Card: 0
   animator: {fileID: 0}
   tmpPositionCursor: {x: 0, y: 0, z: 0}
+  tmpRot: {x: 0, y: 0, z: 0}
   alpha: 0.5
   cursorLocation: {fileID: 0}
   bcheck: 0
   mag: 0
+  rotation: {x: 0, y: 0, z: 0}
   ParentRef: {fileID: 0}
 --- !u!23 &1098270864
 MeshRenderer:
@@ -2838,6 +2858,34 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7c5c8b68b301a0643854851c98936335, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1138972132
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1138972133}
+  m_Layer: 0
+  m_Name: CARD_REFERENCE
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1138972133
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1138972132}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.01}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1311969410}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1151840748
 GameObject:
   m_ObjectHideFlags: 0
@@ -3413,10 +3461,12 @@ MonoBehaviour:
   Id_Card: 2
   animator: {fileID: 0}
   tmpPositionCursor: {x: 0, y: 0, z: 0}
+  tmpRot: {x: 0, y: 0, z: 0}
   alpha: 0.5
   cursorLocation: {fileID: 0}
   bcheck: 0
   mag: 0
+  rotation: {x: 0, y: 0, z: 0}
   ParentRef: {fileID: 0}
 --- !u!23 &1308675809
 MeshRenderer:
@@ -3557,6 +3607,7 @@ Transform:
   - {fileID: 667043788}
   - {fileID: 1004526536}
   - {fileID: 1091016894}
+  - {fileID: 1138972133}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4154,10 +4205,12 @@ MonoBehaviour:
   Id_Card: 3
   animator: {fileID: 0}
   tmpPositionCursor: {x: 0, y: 0, z: 0}
+  tmpRot: {x: 0, y: 0, z: 0}
   alpha: 0.5
   cursorLocation: {fileID: 0}
   bcheck: 0
   mag: 0
+  rotation: {x: 0, y: 0, z: 0}
   ParentRef: {fileID: 0}
 --- !u!23 &1588235817
 MeshRenderer:
@@ -4589,6 +4642,8 @@ MonoBehaviour:
   IsDisabled: 0
   tmpEarth_01: {fileID: 0}
   tmpEarth_02: {fileID: 0}
+  tmpEarth: {fileID: 0}
+  tmpEarthCloseup: {fileID: 0}
 --- !u!1 &1699655683
 GameObject:
   m_ObjectHideFlags: 0

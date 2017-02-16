@@ -25,7 +25,7 @@ public class InnovationTargetManager : MonoBehaviour {
         GazeTmp = GetComponent<GazeSelection>();
         GameObject tmpCards = GameObject.Find("CameraRigMain");
 
-        
+        /*
         int cardsCount = tmpCards.transform.childCount;
         cards = new CardInformation[cardsCount];
         
@@ -34,6 +34,12 @@ public class InnovationTargetManager : MonoBehaviour {
             tmpCards.transform.GetChild(indexCards).gameObject.SetActive(true);
             cards[indexCards] = tmpCards.transform.GetChild(indexCards).gameObject.GetComponent<CardInformation>();
             //tmpCards.transform.GetChild(indexCards).gameObject.SetActive(false);
+        }
+        */
+        cards = tmpCards.GetComponentsInChildren<CardInformation>();
+        for (int indexCards = 0; indexCards < cards.Length; indexCards++)
+        {
+            cards[indexCards].gameObject.SetActive(true);
         }
     }
 	

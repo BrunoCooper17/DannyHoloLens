@@ -37,7 +37,7 @@ public class CardInformation : MonoBehaviour {
     private void Start()
     {
         animator = GetComponent<Animator>();
-        cursorLocation = GameObject.Find("GazeCursor");
+        cursorLocation = GameObject.Find("CARD_REFERENCE");
     }
 
     void Update()
@@ -45,9 +45,8 @@ public class CardInformation : MonoBehaviour {
         alpha = 0.15f;
 
         Vector3 tmpCursorPos = cursorLocation.transform.position;
-        tmpCursorPos.Normalize();
-        tmpPositionCursor = (alpha * (tmpCursorPos.normalized)) + (1.0f - alpha) * tmpPositionCursor;
-        transform.position = tmpPositionCursor + Camera.main.transform.up * 0.05f;
+        tmpPositionCursor = (alpha * (tmpCursorPos)) + (1.0f - alpha) * tmpPositionCursor;
+        transform.position = tmpPositionCursor;
 
         Quaternion rot = Quaternion.LookRotation(-Camera.main.transform.up, -Camera.main.transform.forward);
         tmpRot = (alpha * (rot.eulerAngles)) + (1.0f - alpha) * tmpRot;
@@ -76,6 +75,9 @@ public class CardInformation : MonoBehaviour {
         animator.Play("Card_Show", 0, 0.0f);
 
         rotation = transform.eulerAngles;
+
+        cursorLocation = GameObject.Find("CARD_REFERENCE");
+        tmpPositionCursor = cursorLocation.transform.position;
     }
 
     public void PlayHide()
