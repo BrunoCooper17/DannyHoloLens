@@ -130,8 +130,14 @@ public class Button : GazeSelectionTarget, IFadeTarget
         {
             TooltipObject.SetActive(false);
         }
-        GameObject.Find("PlanetStub").transform.GetChild(2).gameObject.SetActive(false);
-        GameObject.Find("PlanetStub").transform.GetChild(1).gameObject.SetActive(true);
+
+        GameObject tmpPlanet = GameObject.Find("PlanetStub");
+
+        if(tmpPlanet)
+        {
+            tmpPlanet.transform.GetChild(2).gameObject.SetActive(false);
+            tmpPlanet.transform.GetChild(1).gameObject.SetActive(true);
+        }
 
         if (type == ButtonType.About)
         {
@@ -141,7 +147,7 @@ public class Button : GazeSelectionTarget, IFadeTarget
         }
         if (type == ButtonType.Reset)
         {
-            tmpEarth = GameObject.Find("PlanetStub").transform.GetChild(1).gameObject;
+            tmpEarth = tmpPlanet.transform.GetChild(1).gameObject;
             tmpEarth.SetActive(true);
         }
     }
